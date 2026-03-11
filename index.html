@@ -1,71 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Github Profile Finder</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub Profile Finder</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="container">
-        <div class="left-panel">
-            <h2>Github Finder</h2>
-            <input type="text" id="searchUser" placeholder="Enter Github username">
-            <button id="searchBtn">Search</button>
-            <p id="error">User Not Found!</p>
-        </div>
-        <div class="right-panel">
-            <div class="profile-section">
-                <img src="profile.png" alt="Profile Picture">
-                <div class="profile-info">
-                    <h2>Parul Sharma</h2>
-                    <p id="username">@parulsharma</p>
-                    <p id="about">Full Stack Developer | Content Creator</p>
-                    <div class="stat">
-                        <div class="stat-card">
-                            <span>Followers</span>
-                            <strong>80</strong>
-                        </div>
-                        <div class="stat-card">
-                            <span>Following</span>
-                            <strong>32</strong>
-                       </div>
-                       <div class="stat-card">
-                            <span>Repositories</span>
-                            <strong>24</strong>
-                       </div>
-                       <button id="viewProfile">View Profile</button>
-                    </div>
-                    
-                </div>
-            </div>
-            <div class="repo-section">
-                <h2>Latest Repositories:</h2>
-                <div class="repo-card">
-                    <div class="repo-left">
-                        <h4>Portfolio Website</h4>
-                        <p>Personal portfolio built with HTML,CSS and JS</p>
-                        
-                    </div>
-                    <div class="repo-right">
-                        <span id="language">HTML/CSS</span>
-                        <button>View Repo</button>
-                    </div>
-                </div>
-                <div class="repo-card">
-                    <div class="repo-left">
-                        <h4>Github Finder</h4>
-                        <p>Details of a Github User</p>
-                    </div>
-                    <div class="repo-right">
-                        <span id="language">HTML/CSS/JS</span>
-                        <button>View Repo</button>
-                    </div>
-                </div>
-                <button id="button">Show All Repositories ></button>
-            </div>
-        </div>
-    </div>
-    <script src="script.js"></script>
+
+<div class="container">
+
+<!-- LEFT PANEL -->
+
+<div class="left-panel">
+
+<h2>GitHub Finder</h2>
+
+<input type="text" id="searchUser" placeholder="Enter GitHub username">
+
+<ul id="suggestions"></ul>
+
+<button id="searchBtn">Search</button>
+
+<p id="error">User Not Found!</p>
+
+</div>
+
+
+<!-- RIGHT PANEL -->
+
+<div class="right-panel">
+
+<div class="profile-section">
+
+<img id="avatar" src="https://via.placeholder.com/120">
+
+<div class="profile-info">
+
+<h2 id="name">Search GitHub User</h2>
+
+<p id="username"></p>
+
+<p id="about"></p>
+
+<div class="stat">
+
+<div class="stat-card">
+<span>Followers</span>
+<strong>0</strong>
+</div>
+
+<div class="stat-card">
+<span>Following</span>
+<strong>0</strong>
+</div>
+
+<div class="stat-card">
+<span>Repositories</span>
+<strong>0</strong>
+</div>
+
+<button id="viewProfile">View Profile</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="repo-section">
+
+<h2>Repositories</h2>
+
+<div id="repoContainer"></div>
+
+<button id="button">Show All Repositories ></button>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
 </body>
 </html>
